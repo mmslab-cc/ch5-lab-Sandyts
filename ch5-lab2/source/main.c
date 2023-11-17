@@ -64,6 +64,7 @@ void lowestRatings() {
 
 	for (i = 0; i < ISSUES; i++) {
 		int topicRating = 0;
+
 		for (j = 0; j < RATINGS; j++) {
 			topicRating += responses[i][j] * (j + 1);
 		}
@@ -90,8 +91,8 @@ float averageRating(int issue) {
 			total += responses[issue][i] * (i + 1);
 			counter += responses[issue][i];
 		}
-		return total / counter;
 	}
+	return total / counter;
 }
 
 void displayResults() {
@@ -104,6 +105,7 @@ void displayResults() {
 	printf("%20s\n", "Average Rating");
 
 	for (i = 0; i < ISSUES; i++) {
+
 		printf("%20s", topics[i]);
 
 		for (j = 0; j < RATINGS; j++) {
